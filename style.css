@@ -135,6 +135,16 @@ h2 {
 
 /* Hero Content */
 
+.shift-left {
+  position: relative;
+  left: -30px; /* Slight left shift */
+}
+
+@media (max-width: 767.98px) {
+  .shift-left {
+    left: 0; /* Reset on mobile */
+  }
+}
 
 .shine {
   display: inline-block;
