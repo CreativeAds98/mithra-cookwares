@@ -76,7 +76,7 @@
           </div>
 
           <div class="price-section mb-2">
-            <h4 class="text-danger fw-bold" id="productPrice">₹0000</h4>
+            <h4 class="text-danger fw-bold" id="productPrice"></h4>
           </div>
 
           <!-- Offers -->
@@ -138,7 +138,7 @@
         const newPrice = button.getAttribute("data-price");
         const newSize = button.getAttribute("data-size");
 
-        priceDisplay.textContent = `₹${newPrice}`;
+        priceDisplay.textContent = `${newPrice}`;
         sizeDisplay.textContent = newSize;
       });
     });

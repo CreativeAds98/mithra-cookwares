@@ -76,7 +76,7 @@
           </div>
 
           <div class="price-section mb-2">
-            <h4 class="text-danger fw-bold" id="productPrice">₹1,620</h4>
+            <h4 class="text-danger fw-bold" id="productPrice"></h4>
           </div>
           <p class="text-muted mb-3">Selected Size: <span id="selectedSize">10</span></p>
 
@@ -91,12 +91,12 @@
           <div class="size-select mb-4">
             <label class="fw-semibold mb-2 d-block">Select Size: </label>
             <div class="d-flex flex-wrap gap-2">
-              <button class="btn btn-outline-primary size-btn active" data-price="0000" data-size="10">10</button>
-              <button class="btn btn-outline-primary size-btn" data-price="0000" data-size="12">12</button>
-              <button class="btn btn-outline-primary size-btn" data-price="0000" data-size="14">14</button>
-              <button class="btn btn-outline-primary size-btn" data-price="0000" data-size="17">17</button>
-              <button class="btn btn-outline-primary size-btn" data-price="0000" data-size="19">19</button>
-              <button class="btn btn-outline-primary size-btn" data-price="0000" data-size="23">23</button>
+              <button class="btn btn-outline-primary size-btn active" data-price="" data-size="10">10</button>
+              <button class="btn btn-outline-primary size-btn" data-price="" data-size="12">12</button>
+              <button class="btn btn-outline-primary size-btn" data-price="" data-size="14">14</button>
+              <button class="btn btn-outline-primary size-btn" data-price="" data-size="17">17</button>
+              <button class="btn btn-outline-primary size-btn" data-price="" data-size="19">19</button>
+              <button class="btn btn-outline-primary size-btn" data-price="" data-size="23">23</button>
             </div>
           </div>
 
@@ -151,7 +151,7 @@
         const newPrice = button.getAttribute("data-price");
         const newSize = button.getAttribute("data-size");
 
-        priceDisplay.textContent = `₹${newPrice}`;
+        priceDisplay.textContent = `${newPrice}`;
         sizeDisplay.textContent = newSize;
       });
     });

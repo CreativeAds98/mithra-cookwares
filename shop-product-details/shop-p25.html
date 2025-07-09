@@ -76,7 +76,7 @@
           </div>
 
           <div class="price-section mb-2">
-            <h4 class="text-danger fw-bold" id="productPrice">₹1,620</h4>
+            <h4 class="text-danger fw-bold" id="productPrice"></h4>
           </div>
           <p class="text-muted mb-3">Selected Size: <span id="selectedSize">0000</span></p>
 
@@ -91,23 +91,23 @@
 <div class="size-select mb-4">
   <label class="fw-semibold mb-2 d-block">Select Size: </label>
   <div class="d-flex flex-wrap gap-2">
-    <button class="btn btn-outline-primary size-btn active" data-price="000" data-size="1">1</button>
-    <button class="btn btn-outline-primary size-btn" data-price="000" data-size="2">2</button>
-    <button class="btn btn-outline-primary size-btn" data-price="000" data-size="3">3</button>
-    <button class="btn btn-outline-primary size-btn" data-price="000" data-size="4">4</button>
-    <button class="btn btn-outline-primary size-btn" data-price="000" data-size="5">5</button>
-    <button class="btn btn-outline-primary size-btn" data-price="000" data-size="6">6</button>
-    <button class="btn btn-outline-primary size-btn" data-price="000" data-size="7">7</button>
-    <button class="btn btn-outline-primary size-btn" data-price="000" data-size="8">8</button>
-    <button class="btn btn-outline-primary size-btn" data-price="000" data-size="9">9</button>
-    <button class="btn btn-outline-primary size-btn" data-price="000" data-size="10">10</button>
-    <button class="btn btn-outline-primary size-btn" data-price="000" data-size="11">11</button>
-    <button class="btn btn-outline-primary size-btn" data-price="000" data-size="12">12</button>
-    <button class="btn btn-outline-primary size-btn" data-price="000" data-size="13">13</button>
-    <button class="btn btn-outline-primary size-btn" data-price="000" data-size="14">14</button>
-    <button class="btn btn-outline-primary size-btn" data-price="000" data-size="15">15</button>
-    <button class="btn btn-outline-primary size-btn" data-price="000" data-size="16">16</button>
-    <button class="btn btn-outline-primary size-btn" data-price="000" data-size="16">18</button>
+    <button class="btn btn-outline-primary size-btn active" data-price="" data-size="1">1</button>
+    <button class="btn btn-outline-primary size-btn" data-price="" data-size="2">2</button>
+    <button class="btn btn-outline-primary size-btn" data-price="" data-size="3">3</button>
+    <button class="btn btn-outline-primary size-btn" data-price="" data-size="4">4</button>
+    <button class="btn btn-outline-primary size-btn" data-price="" data-size="5">5</button>
+    <button class="btn btn-outline-primary size-btn" data-price="" data-size="6">6</button>
+    <button class="btn btn-outline-primary size-btn" data-price="" data-size="7">7</button>
+    <button class="btn btn-outline-primary size-btn" data-price="" data-size="8">8</button>
+    <button class="btn btn-outline-primary size-btn" data-price="" data-size="9">9</button>
+    <button class="btn btn-outline-primary size-btn" data-price="" data-size="10">10</button>
+    <button class="btn btn-outline-primary size-btn" data-price="" data-size="11">11</button>
+    <button class="btn btn-outline-primary size-btn" data-price="" data-size="12">12</button>
+    <button class="btn btn-outline-primary size-btn" data-price="" data-size="13">13</button>
+    <button class="btn btn-outline-primary size-btn" data-price="" data-size="14">14</button>
+    <button class="btn btn-outline-primary size-btn" data-price="" data-size="15">15</button>
+    <button class="btn btn-outline-primary size-btn" data-price="" data-size="16">16</button>
+    <button class="btn btn-outline-primary size-btn" data-price="" data-size="18">18</button>
   </div>
 </div>
 
@@ -159,11 +159,9 @@
         sizeButtons.forEach((btn) => btn.classList.remove("active"));
         button.classList.add("active");
 
-        const newPrice = button.getAttribute("data-price");
-        const newSize = button.getAttribute("data-size");
-
-        priceDisplay.textContent = `₹${newPrice}`;
-        sizeDisplay.textContent = newSize;
+        // Set price to empty (no rupees symbol)
+        priceDisplay.textContent = "";
+        sizeDisplay.textContent = button.getAttribute("data-size");
       });
     });
   });

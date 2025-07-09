@@ -77,7 +77,7 @@
           </div>
 
           <div class="price-section mb-2">
-            <h4 class="text-danger fw-bold" id="productPrice">₹0000</h4>
+            <h4 class="text-danger fw-bold" id="productPrice"></h4>
           </div>
           <p class="text-muted mb-3">Selected Size: <span id="selectedSize">—</span></p>
 
@@ -94,29 +94,29 @@
   <!-- Regular Section -->
   <label class="fw-semibold mb-2 d-block">Select Size: Diameter <span class="ms-2">(Regular)</span></label>
   <div class="d-flex flex-wrap gap-2 mb-3">
-    <button class="btn btn-outline-primary size-btn" data-price="000" data-size="10">10</button>
-    <button class="btn btn-outline-primary size-btn" data-price="000" data-size="11">11</button>
-    <button class="btn btn-outline-primary size-btn" data-price="000" data-size="12">12</button>
-    <button class="btn btn-outline-primary size-btn" data-price="000" data-size="13">13</button>
-    <button class="btn btn-outline-primary size-btn" data-price="000" data-size="14">14</button>
-    <button class="btn btn-outline-primary size-btn" data-price="000" data-size="15">15</button>
-    <button class="btn btn-outline-primary size-btn" data-price="000" data-size="16">16</button>
-    <button class="btn btn-outline-primary size-btn" data-price="000" data-size="17">17</button>
-    <button class="btn btn-outline-primary size-btn" data-price="000" data-size="18">18</button>
+    <button class="btn btn-outline-primary size-btn" data-price="" data-size="10">10</button>
+    <button class="btn btn-outline-primary size-btn" data-price="" data-size="11">11</button>
+    <button class="btn btn-outline-primary size-btn" data-price="" data-size="12">12</button>
+    <button class="btn btn-outline-primary size-btn" data-price="" data-size="13">13</button>
+    <button class="btn btn-outline-primary size-btn" data-price="" data-size="14">14</button>
+    <button class="btn btn-outline-primary size-btn" data-price="" data-size="15">15</button>
+    <button class="btn btn-outline-primary size-btn" data-price="" data-size="16">16</button>
+    <button class="btn btn-outline-primary size-btn" data-price="" data-size="17">17</button>
+    <button class="btn btn-outline-primary size-btn" data-price="" data-size="18">18</button>
   </div>
 
   <!-- Induction Section -->
   <label class="fw-semibold mb-2 d-block">Select Size: Diameter <span class="ms-2">(Induction)</span></label>
   <div class="d-flex flex-wrap gap-2">
-    <button class="btn btn-outline-primary size-btn" data-price="000" data-size="10 (Induction)">10</button>
-    <button class="btn btn-outline-primary size-btn" data-price="000" data-size="11 (Induction)">11</button>
-    <button class="btn btn-outline-primary size-btn" data-price="000" data-size="12 (Induction)">12</button>
-    <button class="btn btn-outline-primary size-btn" data-price="000" data-size="13 (Induction)">13</button>
-    <button class="btn btn-outline-primary size-btn" data-price="000" data-size="14 (Induction)">14</button>
-    <button class="btn btn-outline-primary size-btn" data-price="000" data-size="15 (Induction)">15</button>
-    <button class="btn btn-outline-primary size-btn" data-price="000" data-size="16 (Induction)">16</button>
-    <button class="btn btn-outline-primary size-btn" data-price="000" data-size="17 (Induction)">17</button>
-    <button class="btn btn-outline-primary size-btn" data-price="000" data-size="18 (Induction)">18</button>
+    <button class="btn btn-outline-primary size-btn" data-price="" data-size="10 (Induction)">10</button>
+    <button class="btn btn-outline-primary size-btn" data-price="" data-size="11 (Induction)">11</button>
+    <button class="btn btn-outline-primary size-btn" data-price="" data-size="12 (Induction)">12</button>
+    <button class="btn btn-outline-primary size-btn" data-price="" data-size="13 (Induction)">13</button>
+    <button class="btn btn-outline-primary size-btn" data-price="" data-size="14 (Induction)">14</button>
+    <button class="btn btn-outline-primary size-btn" data-price="" data-size="15 (Induction)">15</button>
+    <button class="btn btn-outline-primary size-btn" data-price="" data-size="16 (Induction)">16</button>
+    <button class="btn btn-outline-primary size-btn" data-price="" data-size="17 (Induction)">17</button>
+    <button class="btn btn-outline-primary size-btn" data-price="" data-size="18 (Induction)">18</button>
   </div>
 </div>
 
@@ -171,7 +171,7 @@
         const newPrice = button.getAttribute("data-price");
         const newSize = button.getAttribute("data-size");
 
-        priceDisplay.textContent = `₹${newPrice}`;
+        priceDisplay.textContent = `${newPrice}`;
         sizeDisplay.textContent = newSize;
       });
     });

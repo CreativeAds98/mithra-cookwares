@@ -80,7 +80,7 @@
           </div>
 
           <div class="price-section mb-2">
-            <h4 class="text-danger fw-bold" id="productPrice">₹0000</h4>
+            <h4 class="text-danger fw-bold" id="productPrice"></h4>
           </div>
           <p class="text-muted mb-3">Selected Combo: <span id="selectedSize">Tawa 260mm, Fry Pan 240mm, Kadai 240mm</span></p>
 
@@ -97,7 +97,7 @@
   <!-- Regular Combo -->
   <label class="fw-semibold mb-2 d-block">Select Combo: <span class="ms-2">(Regular)</span></label>
   <div class="d-flex flex-column gap-2 mb-3">
-    <button class="btn btn-outline-primary size-btn active" data-price="0000">
+    <button class="btn btn-outline-primary size-btn active" data-price="" data-size="Tawa 260mm, Fry Pan 240mm, Kadai 240mm">
       Tawa 260mm<br>Fry Pan 240mm<br>Kadai 240mm
     </button>
   </div>
@@ -105,7 +105,7 @@
   <!-- Induction Combo -->
   <label class="fw-semibold mb-2 d-block">Select Combo: <span class="ms-2">(Induction)</span></label>
   <div class="d-flex flex-column gap-2">
-    <button class="btn btn-outline-primary size-btn" data-price="0000">
+    <button class="btn btn-outline-primary size-btn" data-price="" data-size="Tawa 260mm (Induction), Fry Pan 240mm (Induction), Kadai 240mm (Induction)">
       Tawa 260mm (Induction)<br>Fry Pan 240mm (Induction)<br>Kadai 240mm (Induction)
     </button>
   </div>
@@ -158,11 +158,11 @@
         sizeButtons.forEach((btn) => btn.classList.remove("active"));
         button.classList.add("active");
 
-        const newPrice = button.getAttribute("data-price");
-        const newSize = button.getAttribute("data-size");
-
-        priceDisplay.textContent = `₹${newPrice}`;
-        sizeDisplay.textContent = newSize;
+        // Set price to empty (no rupees symbol)
+        priceDisplay.textContent = "";
+        if (sizeDisplay && button.getAttribute("data-size")) {
+          sizeDisplay.textContent = button.getAttribute("data-size");
+        }
       });
     });
   });

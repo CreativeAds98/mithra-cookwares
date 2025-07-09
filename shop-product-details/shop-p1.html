@@ -94,29 +94,29 @@
   <!-- Regular Section -->
   <label class="fw-semibold mb-2 d-block">Select Size: Ltr <span class="ms-2">(Regular)</span></label>
   <div class="d-flex flex-wrap gap-2 mb-3">
-    <button class="btn btn-outline-primary size-btn active" data-price="0000" data-size="1.5 Ltr">1.5</button>
-    <button class="btn btn-outline-primary size-btn" data-price="1200" data-size="2 Ltr">2</button>
-    <button class="btn btn-outline-primary size-btn" data-price="1350" data-size="3 Ltr">3</button>
-    <button class="btn btn-outline-primary size-btn" data-price="1800" data-size="5 Ltr">5</button>
-    <button class="btn btn-outline-primary size-btn" data-price="2300" data-size="7.5 Ltr">7.5</button>
-    <button class="btn btn-outline-primary size-btn" data-price="2500" data-size="10 Ltr">10</button>
-    <button class="btn btn-outline-primary size-btn" data-price="2650" data-size="12 Ltr">12</button>
-    <button class="btn btn-outline-primary size-btn" data-price="0000" data-size="Medium - 4 Ltr">Medium - 4 Ltr</button>
-    <button class="btn btn-outline-primary size-btn" data-price="0000" data-size="Large - 6 Ltr">Large - 6 Ltr</button>
+    <button class="btn btn-outline-primary size-btn active" data-price="" data-size="1.5 Ltr">1.5</button>
+    <button class="btn btn-outline-primary size-btn" data-price="" data-size="2 Ltr">2</button>
+    <button class="btn btn-outline-primary size-btn" data-price="" data-size="3 Ltr">3</button>
+    <button class="btn btn-outline-primary size-btn" data-price="" data-size="5 Ltr">5</button>
+    <button class="btn btn-outline-primary size-btn" data-price="" data-size="7.5 Ltr">7.5</button>
+    <button class="btn btn-outline-primary size-btn" data-price="" data-size="10 Ltr">10</button>
+    <button class="btn btn-outline-primary size-btn" data-price="" data-size="12 Ltr">12</button>
+    <button class="btn btn-outline-primary size-btn" data-price="" data-size="Medium - 4 Ltr">Medium - 4 Ltr</button>
+    <button class="btn btn-outline-primary size-btn" data-price="" data-size="Large - 6 Ltr">Large - 6 Ltr</button>
   </div>
 
   <!-- Induction Section -->
   <label class="fw-semibold mb-2 d-block">Select Size: Ltr <span class="ms-2">(Induction)</span></label>
   <div class="d-flex flex-wrap gap-2">
-    <button class="btn btn-outline-primary size-btn" data-price="1615" data-size="1.5 Ltr (Induction)">1.5</button>
-    <button class="btn btn-outline-primary size-btn" data-price="2015" data-size="2 Ltr (Induction)">2</button>
-    <button class="btn btn-outline-primary size-btn" data-price="2350" data-size="3 Ltr (Induction)">3</button>
-    <button class="btn btn-outline-primary size-btn" data-price="2550" data-size="5 Ltr (Induction)">5</button>
-    <button class="btn btn-outline-primary size-btn" data-price="2750" data-size="7.5 Ltr (Induction)">7.5</button>
-    <button class="btn btn-outline-primary size-btn" data-price="2850" data-size="10 Ltr (Induction)">10</button>
-    <button class="btn btn-outline-primary size-btn" data-price="3050" data-size="12 Ltr (Induction)">12</button>
-    <button class="btn btn-outline-primary size-btn" data-price="3200" data-size="Medium - 4 Ltr (Induction)">Medium - 4 Ltr</button>
-    <button class="btn btn-outline-primary size-btn" data-price="3400" data-size="Large - 6 Ltr (Induction)">Large - 6 Ltr</button>
+    <button class="btn btn-outline-primary size-btn" data-price="" data-size="1.5 Ltr (Induction)">1.5</button>
+    <button class="btn btn-outline-primary size-btn" data-price="" data-size="2 Ltr (Induction)">2</button>
+    <button class="btn btn-outline-primary size-btn" data-price="" data-size="3 Ltr (Induction)">3</button>
+    <button class="btn btn-outline-primary size-btn" data-price="" data-size="5 Ltr (Induction)">5</button>
+    <button class="btn btn-outline-primary size-btn" data-price="" data-size="7.5 Ltr (Induction)">7.5</button>
+    <button class="btn btn-outline-primary size-btn" data-price="" data-size="10 Ltr (Induction)">10</button>
+    <button class="btn btn-outline-primary size-btn" data-price="" data-size="12 Ltr (Induction)">12</button>
+    <button class="btn btn-outline-primary size-btn" data-price="" data-size="Medium - 4 Ltr (Induction)">Medium - 4 Ltr</button>
+    <button class="btn btn-outline-primary size-btn" data-price="" data-size="Large - 6 Ltr (Induction)">Large - 6 Ltr</button>
   </div>
 </div>
 
@@ -165,10 +165,9 @@
         sizeButtons.forEach((btn) => btn.classList.remove("active"));
         button.classList.add("active");
 
-        const newPrice = button.getAttribute("data-price");
+        // Set price to empty (no rupees symbol)
+        priceDisplay.textContent = "";
         const newSize = button.getAttribute("data-size");
-
-        priceDisplay.textContent = `₹${newPrice}`;
         sizeDisplay.textContent = newSize;
       });
     });

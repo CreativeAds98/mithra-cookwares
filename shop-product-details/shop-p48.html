@@ -75,7 +75,7 @@
           </div>
 
           <div class="price-section mb-2">
-            <h4 class="text-danger fw-bold" id="productPrice">₹0000</h4>
+            <h4 class="text-danger fw-bold" id="productPrice"></h4>
           </div>
 
           <p class="text-muted mb-3">Selected Size: <span id="selectedSize">6 inch</span></p>
@@ -91,7 +91,7 @@
           <div class="size-select mb-4">
             <label class="fw-semibold mb-2 d-block">Select Size:</label>
             <div class="d-flex flex-wrap gap-2">
-              <button class="btn btn-outline-primary size-btn active" data-price="000" data-size="6 inch">6 inch</button>
+              <button class="btn btn-outline-primary size-btn active" data-price="" data-size="6 inch">6 inch</button>
             </div>
           </div>
 
@@ -146,7 +146,7 @@
         const newPrice = button.getAttribute("data-price");
         const newSize = button.getAttribute("data-size");
 
-        priceDisplay.textContent = `₹${newPrice}`;
+        priceDisplay.textContent = `${newPrice}`;
         sizeDisplay.textContent = newSize;
       });
     });

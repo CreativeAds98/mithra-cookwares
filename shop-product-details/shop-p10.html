@@ -76,7 +76,7 @@
           </div>
 
           <div class="price-section mb-2">
-            <h4 class="text-danger fw-bold" id="productPrice">₹2,313</h4>
+            <h4 class="text-danger fw-bold" id="productPrice"></h4>
           </div>
           <p class="text-muted mb-3">Selected Size: <span id="selectedSize">260 mm</span></p>
 
@@ -91,9 +91,9 @@
           <div class="size-select mb-4">
             <label class="fw-semibold mb-2 d-block">Select Size: Diameter</label>
             <div class="d-flex flex-wrap gap-2">
-              <button class="btn btn-outline-primary size-btn active" data-price="600" data-size="260 mm">260 mm</button>
-              <button class="btn btn-outline-primary size-btn" data-price="690" data-size="285 mm">285 mm</button>
-              <button class="btn btn-outline-primary size-btn" data-price="305" data-size="305 mm">305 mm</button>
+              <button class="btn btn-outline-primary size-btn active" data-price="" data-size="260 mm">260 mm</button>
+              <button class="btn btn-outline-primary size-btn" data-price="" data-size="285 mm">285 mm</button>
+              <button class="btn btn-outline-primary size-btn" data-price="" data-size="305 mm">305 mm</button>
             </div>
           </div>
 
@@ -145,10 +145,9 @@
         sizeButtons.forEach((btn) => btn.classList.remove("active"));
         button.classList.add("active");
 
-        const newPrice = button.getAttribute("data-price");
+        // Set price to empty (no rupees symbol)
+        priceDisplay.textContent = "";
         const newSize = button.getAttribute("data-size");
-
-        priceDisplay.textContent = `₹${newPrice}`;
         sizeDisplay.textContent = newSize;
       });
     });

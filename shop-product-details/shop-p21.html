@@ -76,7 +76,7 @@
           </div>
 
           <div class="price-section mb-2">
-            <h4 class="text-danger fw-bold" id="productPrice">₹1,620</h4>
+            <h4 class="text-danger fw-bold" id="productPrice"></h4>
           </div>
           <p class="text-muted mb-3">Selected Size: <span id="selectedSize">10-14 (Wire Handle)</span></p>
 
@@ -96,11 +96,11 @@
     <div>
       <strong class="d-block mb-1">Wire Handle:</strong>
       <div class="d-flex flex-wrap gap-2">
-        <button class="btn btn-outline-primary size-btn" data-price="1620" data-size="10mm (Wire Handle)">10</button>
-        <button class="btn btn-outline-primary size-btn" data-price="1650" data-size="11mm (Wire Handle)">11</button>
-        <button class="btn btn-outline-primary size-btn" data-price="1680" data-size="12mm (Wire Handle)">12</button>
-        <button class="btn btn-outline-primary size-btn" data-price="1710" data-size="13mm (Wire Handle)">13</button>
-        <button class="btn btn-outline-primary size-btn" data-price="1740" data-size="14mm (Wire Handle)">14</button>
+        <button class="btn btn-outline-primary size-btn" data-price="" data-size="10mm (Wire Handle)">10</button>
+        <button class="btn btn-outline-primary size-btn" data-price="" data-size="11mm (Wire Handle)">11</button>
+        <button class="btn btn-outline-primary size-btn" data-price="" data-size="12mm (Wire Handle)">12</button>
+        <button class="btn btn-outline-primary size-btn" data-price="" data-size="13mm (Wire Handle)">13</button>
+        <button class="btn btn-outline-primary size-btn" data-price="" data-size="14mm (Wire Handle)">14</button>
       </div>
     </div>
 
@@ -108,13 +108,13 @@
     <div>
       <strong class="d-block mb-1">Metal Handle:</strong>
       <div class="d-flex flex-wrap gap-2">
-        <button class="btn btn-outline-primary size-btn" data-price="1700" data-size="10mm (Metal Handle)">10</button>
-        <button class="btn btn-outline-primary size-btn" data-price="1730" data-size="11mm (Metal Handle)">11</button>
-        <button class="btn btn-outline-primary size-btn" data-price="1760" data-size="12mm (Metal Handle)">12</button>
-        <button class="btn btn-outline-primary size-btn" data-price="1790" data-size="13mm (Metal Handle)">13</button>
-        <button class="btn btn-outline-primary size-btn" data-price="1820" data-size="14mm (Metal Handle)">14</button>
-        <button class="btn btn-outline-primary size-btn" data-price="1850" data-size="15mm (Metal Handle)">15</button>
-        <button class="btn btn-outline-primary size-btn" data-price="1880" data-size="16mm (Metal Handle)">16</button>
+        <button class="btn btn-outline-primary size-btn" data-price="" data-size="10mm (Metal Handle)">10</button>
+        <button class="btn btn-outline-primary size-btn" data-price="" data-size="11mm (Metal Handle)">11</button>
+        <button class="btn btn-outline-primary size-btn" data-price="" data-size="12mm (Metal Handle)">12</button>
+        <button class="btn btn-outline-primary size-btn" data-price="" data-size="13mm (Metal Handle)">13</button>
+        <button class="btn btn-outline-primary size-btn" data-price="" data-size="14mm (Metal Handle)">14</button>
+        <button class="btn btn-outline-primary size-btn" data-price="" data-size="15mm (Metal Handle)">15</button>
+        <button class="btn btn-outline-primary size-btn" data-price="" data-size="16mm (Metal Handle)">16</button>
       </div>
     </div>
 
@@ -122,11 +122,11 @@
     <div>
       <strong class="d-block mb-1">Bakelite Handle:</strong>
       <div class="d-flex flex-wrap gap-2">
-        <button class="btn btn-outline-primary size-btn" data-price="1620" data-size="10mm (Bakelite Handle)">10</button>
-        <button class="btn btn-outline-primary size-btn" data-price="1650" data-size="11mm (Bakelite Handle)">11</button>
-        <button class="btn btn-outline-primary size-btn" data-price="1680" data-size="12mm (Bakelite Handle)">12</button>
-        <button class="btn btn-outline-primary size-btn" data-price="1710" data-size="13mm (Bakelite Handle)">13</button>
-        <button class="btn btn-outline-primary size-btn" data-price="1740" data-size="14mm (Bakelite Handle)">14</button>
+        <button class="btn btn-outline-primary size-btn" data-price="" data-size="10mm (Bakelite Handle)">10</button>
+        <button class="btn btn-outline-primary size-btn" data-price="" data-size="11mm (Bakelite Handle)">11</button>
+        <button class="btn btn-outline-primary size-btn" data-price="" data-size="12mm (Bakelite Handle)">12</button>
+        <button class="btn btn-outline-primary size-btn" data-price="" data-size="13mm (Bakelite Handle)">13</button>
+        <button class="btn btn-outline-primary size-btn" data-price="" data-size="14mm (Bakelite Handle)">14</button>
       </div>
     </div>
 
@@ -183,10 +183,9 @@
         sizeButtons.forEach((btn) => btn.classList.remove("active"));
         button.classList.add("active");
 
-        const newPrice = button.getAttribute("data-price");
+        // Set price to empty (no rupees symbol)
+        priceDisplay.textContent = "";
         const newSize = button.getAttribute("data-size");
-
-        priceDisplay.textContent = `₹${newPrice}`;
         sizeDisplay.textContent = newSize;
       });
     });
