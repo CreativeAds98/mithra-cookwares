@@ -158,10 +158,9 @@
         sizeButtons.forEach((btn) => btn.classList.remove("active"));
         button.classList.add("active");
 
-        const newPrice = button.getAttribute("data-price");
+        // Set price to empty (no rupees symbol)
+        priceDisplay.textContent = "";
         const newSize = button.getAttribute("data-size");
-
-        priceDisplay.textContent = `₹${newPrice}`;
         sizeDisplay.textContent = newSize;
       });
     });
