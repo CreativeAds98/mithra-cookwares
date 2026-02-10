@@ -73,10 +73,32 @@
 
       <!-- Newsletter Form -->
       <div class="col-md-6">
-        <form class="d-flex flex-column flex-md-row justify-content-md-end gap-2">
-          <input type="email" class="form-control" placeholder="Your email address">
-          <button type="submit" class="btn btn-danger">Sign Up</button>
-        </form>
+                <form 
+                  action="https://api.web3forms.com/submit" 
+                  method="POST"
+                  class="d-flex flex-column flex-md-row justify-content-md-end gap-2"
+                >
+
+                  <!-- Web3Forms Access Key -->
+                  <input type="hidden" name="access_key" value="82ddfa77-cc30-4b61-8cb5-2e5a3ede8950">
+
+                  <!-- Optional subject -->
+                  <input type="hidden" name="subject" value="Email Sign Up">
+
+                  <input 
+                    type="email" 
+                    name="email"
+                    class="form-control" 
+                    placeholder="Your email address" 
+                    required>
+
+                  <button 
+                    type="submit" 
+                    class="btn btn-danger">
+                    Sign Up
+                  </button>
+
+                </form>
       </div>
 
     </div>
