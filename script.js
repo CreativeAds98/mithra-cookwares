@@ -1,7 +1,8 @@
-// script.js
-
 document.addEventListener('DOMContentLoaded', function () {
-  // Smooth scroll for nav links
+
+  /* ===============================
+     Smooth Scroll for Nav Links
+  =============================== */
   const navLinks = document.querySelectorAll('.nav-link');
 
   navLinks.forEach(link => {
@@ -14,13 +15,16 @@ document.addEventListener('DOMContentLoaded', function () {
     });
   });
 
-  // Example: Add active class to nav based on scroll
+
+  /* ===============================
+     Active Nav Link on Scroll
+  =============================== */
   window.addEventListener('scroll', () => {
     let current = '';
 
     document.querySelectorAll('section').forEach(section => {
       const sectionTop = section.offsetTop;
-      if (pageYOffset >= sectionTop - 100) {
+      if (window.pageYOffset >= sectionTop - 100) {
         current = section.getAttribute('id');
       }
     });
@@ -32,17 +36,44 @@ document.addEventListener('DOMContentLoaded', function () {
       }
     });
   });
+
+
+  /* ===============================
+     Career Form (Safe Check)
+  =============================== */
+  const careerForm = document.getElementById('careerForm');
+  if (careerForm) {
+    careerForm.addEventListener('submit', function (e) {
+      e.preventDefault();
+      this.classList.add('d-none');
+
+      const successMessage = document.getElementById('successMessage');
+      if (successMessage) {
+        successMessage.classList.remove('d-none');
+      }
+    });
+  }
+
+
+  /* ===============================
+     Scroll To Top Button
+  =============================== */
+  const scrollBtn = document.getElementById("scrollTopBtn");
+
+  if (scrollBtn) {
+
+    window.addEventListener("scroll", function () {
+      if (window.scrollY > 200) {
+        scrollBtn.style.display = "block";
+      } else {
+        scrollBtn.style.display = "none";
+      }
+    });
+
+    scrollBtn.addEventListener("click", function () {
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    });
+
+  }
+
 });
-
-  // career form submission handler
-
-  document.getElementById('careerForm').addEventListener('submit', function (e) {
-    e.preventDefault();
-    this.classList.add('d-none');
-    document.getElementById('successMessage').classList.remove('d-none');
-  });
-
-
-  
-
-
